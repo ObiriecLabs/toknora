@@ -18,7 +18,7 @@
 
 ## Download
 
-👉 **[Latest Release — v2.2.3](https://github.com/ObiriecLabs/toknora/releases/latest)**
+👉 **[Latest Release — v2.3.0](https://github.com/ObiriecLabs/toknora/releases/latest)**
 
 | Platform | File | Notes |
 |---|---|---|
@@ -67,6 +67,21 @@ Tracks your context window usage and maps it against Claude plans (Free / Pro / 
 
 ### 🔀 Compare
 Side-by-side comparison of two time periods. Shows delta KPIs and charts so you can measure whether your AI usage is improving over time.
+
+### 🔌 Services *(new in v2.3.0)*
+Monitors your paid API service balances in one place — no more switching between dashboards.
+
+| Service | What it shows |
+|---|---|
+| **ElevenLabs** | Character balance remaining |
+| **Runway** | Credit balance |
+| **Mureka** | Credit balance |
+| **Stripe** | Available account balance |
+| **Resend** | Emails sent this month |
+| **fal.ai** | Credit balance |
+| **Gemini** | API quota status |
+
+API keys are read from `~/.ol-dashboard/config.json` (shared with OL API Dashboard) or `~/.auris/config.json`. Balances are cached for 120 seconds and can be force-refreshed with `R`.
 
 ---
 
@@ -121,9 +136,12 @@ Press `,` to open Settings — Alerts / Export (TTS voice picker) / General tabs
 
 | Key | Action | Key | Action |
 |---|---|---|---|
-| `1–5` | Switch view | `R` | Refresh |
-| `E` | Export panel | `,` | Settings |
-| `?` | Help | `Esc` | Close modal |
+| `1` | Dashboard | `2` | Live |
+| `3` | Optimize | `4` | Budget |
+| `5` | Compare | `6` | Services |
+| `R` | Refresh | `E` | Export panel |
+| `,` | Settings | `?` | Help |
+| `Esc` | Close modal | | |
 
 ---
 
@@ -150,7 +168,9 @@ Offline HMAC-SHA256 license validation — no activation server required. Your k
 
 | Version | Date | Highlights |
 |---|---|---|
-| **v2.2.3** | 2026-04-25 | Voice picker TTS, email fix, clickable links in settings, language selector fix |
+| **v2.3.0** | 2026-05-10 | Services view (ElevenLabs, Runway, Mureka, Stripe, Resend, fal.ai, Gemini), header countdown fix, shortcut `6` |
+| v2.2.4 | 2026-04-25 | Two-repo architecture, updater pointing to public release repo |
+| v2.2.3 | 2026-04-25 | Voice picker TTS, email fix, clickable links in settings, language selector fix |
 | v2.2.2 | 2026-04-24 | Optimize actions, MCP remove confirmation |
 | v2.2.1 | 2026-04-24 | AI provider filter, desktop app monitoring |
 | v2.2.0 | 2026-04-24 | TOKNORA Web Extension (Chrome, Firefox, Edge) |
